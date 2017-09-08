@@ -1,0 +1,24 @@
+{
+  "name": "simple-guessing-number-game",
+  "version": "1.0.0",
+  "description": "game where player need to guess a number between 1 and 100",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"repository\" :"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agzaim/Simple-guessing-number-game.git"
+  },
+  "author": "Monika M.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agzaim/Simple-guessing-number-game/issues"
+  },
+  "homepage": "https://github.com/agzaim/Simple-guessing-number-game#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
