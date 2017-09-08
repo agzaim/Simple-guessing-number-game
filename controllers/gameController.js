@@ -8,12 +8,12 @@ var mysteriousNumber = Math.floor(Math.random() * 100 + 1);
 module.exports = function(app){
 
     app.get("/game", function(req, res) {
-        res.render("game", {judgement: serverAnswers});
+        res.render("game");
     });
 
     app.post("/game", urlencodedParser, function(req, res) {
-        var playerGuess = req.body;
-       
+        console.log(req.body);
+       res.render("game", {serverAnswers: serverAnswers, playerGuess: req.body, seekingNumber: mysteriousNumber});
 
     });
 };                                                                       

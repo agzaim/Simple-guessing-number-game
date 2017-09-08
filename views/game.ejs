@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -9,13 +10,41 @@
     <body>
         <div class="container">
             <h1>Guess what number from 1 to 100 I'm thinking about!</h1>
-            <div id="serverAnswer">
+
+            <% 
+            if (Number.isInteger(playerGuess.guess)) { 
+
+                if (playerGuess.guess > seekingNumber) { %>
+
+            <div id="serverAnswer"> 
+                <%= serverAnswers.answer1 %> 
             </div>
-            <form>
-            <input id="userAnswer" placeholder="Enter your guess" type="text" name="userAnswer"/>
-            <button id="startButton" type="submit">Checking!</button>
-            </form>
+
+            <%
+            } else if (playerGuess.guess < seekingNumber) { %>
+            
+            <div id="serverAnswer"> 
+                <%= serverAnswers.answer2 %> 
+            </div>
+            
+            <%
+            } else  if (playerGuess.guess == seekingNumber) { %>
+            
+            <div id="serverAnswer"> 
+                <%= serverAnswers.answer3 %> 
+            </div>
             <button id="renewButton">Please, let me play one more time!</button>
+            
+            <%
+            } 
+            }
+                %>
+
+            <form>
+                <input id="userAnswer" placeholder="Enter your guess" type="text" name="userAnswer"/>
+                <button id="startButton" type="submit">Checking!</button>
+            </form>
+
         </div>
     </body>
 </html>
