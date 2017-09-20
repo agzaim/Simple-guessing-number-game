@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple guessing game</title>
+        <link rel="stylesheet" href="/assets/main.css">
+        <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="/assets/game.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Guess what number from 1 to 100 I'm thinking about!</h1>
+
+            <div id="serverAnswer"> 
+            </div>
+        
+            <button id="renewButton">Play again</button>
+  
+            <form>
+                <input id="userAnswer" placeholder="Enter your guess" type="text" name="userAnswer"/>
+                <button id="checkingButton" type="submit">Checking!</button>
+            </form>
+
+        </div>
+    </body>
+</html>
